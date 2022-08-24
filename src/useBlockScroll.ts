@@ -3,6 +3,7 @@ import { useEffect } from "react"
 export default function useBlockScroll(condition = true) {
     useEffect(() => {
         if (!condition) return
+
         // 1. Create css
         const styleEl = document.createElement("style")
         styleEl.innerHTML =

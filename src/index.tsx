@@ -1,9 +1,8 @@
-import { useState, ReactNode, FC, useEffect, ComponentProps } from "react"
+import { useState, useEffect, FC, ComponentProps, CSSProperties } from "react"
 import { createPortal } from "react-dom"
 import useBlockScroll from "./useBlockScroll"
 
 type ModalProps = ComponentProps<"div"> & {
-    children?: ReactNode
     onShow?: () => void
     onHide?: () => void
     mask?: boolean
@@ -34,7 +33,7 @@ export default function useModal() {
     }) => {
         if (!show) return null
 
-        const modalStyle: React.CSSProperties = {
+        const modalStyle: CSSProperties = {
             position: "fixed",
             zIndex: 100,
             top: 0,

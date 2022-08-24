@@ -1,5 +1,9 @@
 import { useEffect } from "react"
 
+/**
+ * Prevents body from scrolling
+ * @param condition the condition when the scroll blocking takes effect
+ */
 export default function useBlockScroll(condition = true) {
     useEffect(() => {
         if (!condition) return

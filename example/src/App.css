@@ -1,0 +1,11 @@
+.content {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    margin-top: 48px;
+    padding: 20px;
+}
+
+.react_useModal_container {
+    background-color: rgba(0, 0, 0, 0.4);
+}

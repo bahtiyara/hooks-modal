@@ -1,4 +1,5 @@
 import useModal from "../../src"
+import "./App.css"
 
 export default function App() {
     const [Modal, toggleModal] = useModal()
@@ -7,14 +8,7 @@ export default function App() {
         <div className="app">
             <button onClick={toggleModal}>Open</button>
             <Modal>
-                <div
-                    style={{
-                        backgroundColor: "white",
-                        width: 400,
-                        margin: "auto",
-                        marginTop: 48,
-                    }}
-                >
+                <div className="content">
                     <div>This is modal content</div>
                     <button onClick={toggleModal}>Close</button>
                 </div>

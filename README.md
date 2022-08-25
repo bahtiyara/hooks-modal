@@ -2,7 +2,7 @@
 A super light and easy-to-use react custom hook to implement modals using `Portals`.
 &nbsp;
 
-### Basic Usage
+## Basic Usage
 Install:
 ```bash
 $ npm i react-use-modal
@@ -40,7 +40,7 @@ function App() {
 ```
 &nbsp;
 
-### Multiple Modals
+## Multiple Modals
 You can have as many modals as you want.
 ```jsx
 const [ModalA, toggleModalA] = useModal()
@@ -66,7 +66,7 @@ return (
 ```
 &nbsp;
 
-### Support Context
+## Support Context
 `Modal` is not blocking its children from receiving any context:
 ```jsx
 import { AppContext } from './AppContext'
@@ -101,7 +101,7 @@ function ModalContent () {
 ```
 &nbsp;
 
-### Props
+## Props
 `Modal` inherits any props from `HTMLDivElement`, on top of that, it also provides several very useful props, these are all optional:
 | Name           |    Type    |                                                                                                                                                                                                  Description |            Default |
 | -------------- | :--------: | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -----------------: |
@@ -114,7 +114,7 @@ function ModalContent () {
 | `onHide`       | `()=>void` |                                                                                                                                                                       Do something when the modal is closed. |        `undefined` |
 &nbsp;
 
-### Set Prop Values Globally
+## Set Prop Values Globally
 If you want to use certain values to props globally in your project, you can wrap this hook with your own custom hook, and set the values there:
 ```jsx
 import React, { FC, ComponentProps } from "react"
@@ -142,4 +142,5 @@ export default function useMyModal() {
 }
 ```
 &nbsp;
+
 Hope you enjoy ! ;)

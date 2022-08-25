@@ -46,7 +46,7 @@ export default function useModal() {
         onShow,
         onHide,
         blockScroll = false,
-        className = "react_useModal_container",
+        className = "useModal_wrapper",
         ...rest
     }) => {
         if (!show) return null

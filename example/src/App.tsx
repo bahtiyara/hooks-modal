@@ -1,4 +1,4 @@
-import useModal from "../../src"
+import useModal from "react-usemodal"
 import "./App.css"
 
 export default function App() {

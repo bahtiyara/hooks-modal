@@ -1,5 +1,5 @@
 import React, { FC, ComponentProps } from "react"
-import useModal from "../../src"
+import useModal from "react-usemodal"
 
 export default function useMyModal() {
     const [Modal, toggleModal] = useModal()

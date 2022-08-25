@@ -5,7 +5,7 @@ A super light and easy-to-use react custom hook to implement modals using `Porta
 ## Basic Usage
 Install:
 ```bash
-$ npm i react-use-modal
+$ npm i hooks-modal
 ```
 Add root div:
 ```HTML
@@ -19,7 +19,7 @@ Add root div:
 ```
 Use:
 ```jsx
-import useModal from 'react-use-modal'
+import useModal from 'hooks-modal'
 
 function App() {
     const [Modal, toggleModal] = useModal()
@@ -118,7 +118,7 @@ function ModalContent () {
 If you want to use certain values to props globally in your project, you can wrap this hook with your own custom hook, and set the values there:
 ```jsx
 import React, { FC, ComponentProps } from "react"
-import useModal from "react-use-modal"
+import useModal from "hooks-modal"
 
 export default function useMyModal() {
     const [Modal, toggleModal] = useModal()

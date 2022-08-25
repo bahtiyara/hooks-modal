@@ -112,6 +112,7 @@ function ModalContent () {
 | `rootId`       | `string`   | The id of the HTML element that Portal will render the modal into.                                                                                                                                           | `modal-root`       |
 | `onShow`       | `()=>void` | Do something when the modal is opened.                                                                                                                                                                       | `undefined`        |
 | `onHide`       | `()=>void` | Do something when the modal is closed.                                                                                                                                                                       | `undefined`        |
+
 &nbsp;
 
 ## Set Prop Values Globally
@@ -120,27 +121,33 @@ If you want to use certain values to props globally in your project, you can wra
 import React, { FC, ComponentProps } from "react"
 import useModal from "hooks-modal"
 
-export default function useMyModal() {
-    const [Modal, toggleModal] = useModal()
+export default function usePopover() {
+    const [Modal, togglePopover] = useModal()
 
     type ModalProps = ComponentProps<typeof Modal>
 
-    const MyModal: FC<ModalProps> = ({
+    const Popover: FC<ModalProps> = ({
         children,
         blockScroll,
         ...rest 
-    }) => {
-        // Add prop values globally
-        return (
-            <Modal {...rest} blockScroll={true}>
-                {children}
-            </Modal>
-        )
-    }
+    }) => (
+        <Modal
+            // Showing popover will not prevent user
+            // interaction with background element
+            mask={false}
+            // Hide the popover when it loses focus
+            onBlur={togglePopover}
+            // User can still scroll the body element
+            blockScroll={false}
+            {...rest}
+        >
+            {children}
+        </Modal>
+    )
 
-    return [MyModal, toggleModal] as [FC<ModalProps>, () => void]
+    return [Popover, togglePopover] as [FC<ModalProps>, () => void]
 }
 ```
 &nbsp;
 
-Hope you enjoy ! ;)
+Enjoy ! ;)

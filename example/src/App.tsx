@@ -1,4 +1,4 @@
-import useModal from "react-usemodal"
+import useModal from "hooks-modal"
 import "./App.css"
 
 export default function App() {

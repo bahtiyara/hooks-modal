@@ -1,8 +1,27 @@
 {
     "name": "react-usemodal",
-    "private": true,
-    "version": "0.0.0",
+    "description": "A super light and easy-to-use library to implement modals using Portals.",
+    "main": "src/index.tsx",
+    "version": "1.0.0",
     "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bahtiyara/react-usemodal.git"
+    },
+    "keywords": [
+        "react",
+        "hooks",
+        "modal"
+    ],
+    "author": {
+        "name": "Bahtiyar Ahmidi",
+        "email": "bahtiyar_a@live.com"
+    },
+    "license": "MIT License",
+    "bugs": {
+        "url": "https://github.com/bahtiyara/react-useModal/issues"
+    },
+    "homepage": "https://github.com/bahtiyara/react-usemodal",
     "scripts": {},
     "dependencies": {
         "react": "^18.2.0",

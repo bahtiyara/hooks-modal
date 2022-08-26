@@ -128,6 +128,7 @@ export default function usePopover() {
 
     const Popover: FC<PopoverProps> = ({
         children,
+        mask,
         blockScroll,
         ...rest 
     }) => (
@@ -135,10 +136,10 @@ export default function usePopover() {
             // Showing popover will not prevent user
             // interaction with background element
             mask={false}
-            // Hide the popover when it loses focus
-            onBlur={togglePopover}
             // User can still scroll the body element
             blockScroll={false}
+            // Hide the popover when it loses focus
+            onBlur={togglePopover}
             {...rest}
         >
             {children}

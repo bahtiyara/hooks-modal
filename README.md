@@ -7,16 +7,6 @@ Install:
 ```bash
 $ npm i hooks-modal
 ```
-Add root div:
-```HTML
-<!-- index.html -->
-<body>
-    <div id="root"></div>
-
-    <!-- Add this 👇 -->
-    <div id="modal-root"></div>
-</body>
-```
 Use:
 ```jsx
 import useModal from 'hooks-modal'

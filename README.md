@@ -126,7 +126,7 @@ export default function usePopover() {
 
     type PopoverProps = ComponentProps<typeof Modal>
 
-    const Popover: FC<ModalProps> = ({
+    const Popover: FC<PopoverProps> = ({
         children,
         blockScroll,
         ...rest 
@@ -145,9 +145,9 @@ export default function usePopover() {
         </Modal>
     )
 
-    return [Popover, togglePopover] as [FC<ModalProps>, () => void]
+    return [Popover, togglePopover] as [FC<PopoverProps>, () => void]
 }
 ```
 &nbsp;
 
-Enjoy ! ;)
+Enjoy ;)

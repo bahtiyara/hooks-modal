@@ -106,7 +106,7 @@ function ModalContent () {
 &nbsp;
 
 ## Set Prop Values Globally
-If you want to use certain values to props globally in your project, you can wrap this hook with your own custom hook, and set the values there:
+If you want to use certain prop values globally in your project, you can wrap this hook with your own custom hook, and set the values there:
 ```jsx
 import React, { FC, ComponentProps } from "react"
 import useModal from "hooks-modal"

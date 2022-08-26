@@ -67,6 +67,13 @@ export default function useModal() {
 
         useBlockScroll(blockScroll)
 
+        let root = document.querySelector(`#${rootId}`)
+        if (!root) {
+            root = document.createElement("div")
+            root.id = rootId
+            document.body.append(root)
+        }
+
         return createPortal(
             <div
                 style={modalStyle}
@@ -81,7 +88,7 @@ export default function useModal() {
             >
                 {children}
             </div>,
-            document.querySelector(`#${rootId}`)!
+            root
         )
     }
 

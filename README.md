@@ -124,7 +124,7 @@ import useModal from "hooks-modal"
 export default function usePopover() {
     const [Modal, togglePopover] = useModal()
 
-    type ModalProps = ComponentProps<typeof Modal>
+    type PopoverProps = ComponentProps<typeof Modal>
 
     const Popover: FC<ModalProps> = ({
         children,

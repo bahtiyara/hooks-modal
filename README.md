@@ -57,7 +57,7 @@ return (
 &nbsp;
 
 ## Support Context
-`Modal` is not blocking its children from receiving any context:
+`Modal` is not blocking its children from receiving any context (Other implementations I've seen could loose the context):
 ```jsx
 import { AppContext } from './AppContext'
 import ModalContent from './ModalContent'

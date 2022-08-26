@@ -2,7 +2,7 @@
     "name": "hooks-modal",
     "description": "A super light and easy-to-use library to implement modals using Portals.",
     "main": "src/index.tsx",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "type": "module",
     "repository": {
         "type": "git",

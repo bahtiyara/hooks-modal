@@ -88,7 +88,9 @@ export default function useModal() {
             <div
                 style={modalStyle}
                 onClick={(e) => {
-                    maskClosable && e.currentTarget === e.target && toggleModal()
+                    if (maskClosable && e.currentTarget === e.target) {
+                        toggleModal()
+                    }
                     onClick?.(e)
                 }}
                 className={className}

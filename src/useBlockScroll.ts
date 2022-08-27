@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import { useEffect } from "react"
+import { useEffect } from 'react'
 
 /**
  * Prevents body from scrolling
@@ -31,9 +31,8 @@ export default function useBlockScroll(condition = true) {
         if (!condition) return
 
         // 1. Create css
-        const styleEl = document.createElement("style")
-        styleEl.innerHTML =
-            ".scroll-disabled { position: fixed; width: 100%; overflow-y: auto }"
+        const styleEl = document.createElement('style')
+        styleEl.innerHTML = '.scroll-disabled { position: fixed; width: 100%; overflow-y: auto }'
         document.head.appendChild(styleEl)
 
         // 2. Save scroll top, add class
@@ -42,14 +41,14 @@ export default function useBlockScroll(condition = true) {
 
         scrollTop = documentElement.scrollTop
         body.style.top = `-${scrollTop}px`
-        body.classList.add("scroll-disabled")
+        body.classList.add('scroll-disabled')
 
         // 3. Restore scroll position, remove class
         return () => {
             styleEl.remove()
-            body.classList.remove("scroll-disabled")
+            body.classList.remove('scroll-disabled')
             documentElement.scrollTop = scrollTop
-            body.style.removeProperty("top")
+            body.style.removeProperty('top')
         }
     }, [])
 }

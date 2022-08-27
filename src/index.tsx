@@ -20,9 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-import { useState, useEffect, FC, CSSProperties } from "react"
-import { createPortal } from "react-dom"
-import useBlockScroll from "./useBlockScroll"
+import * as React from 'react'
+import { useState, useEffect, FC, CSSProperties } from 'react'
+import { createPortal } from 'react-dom'
+import useBlockScroll from './useBlockScroll'
+
+type ModalProps = React.ComponentProps<'div'> & {
+    mask?: boolean
+    maskClosable?: boolean
+    blockScroll?: boolean
+    rootId?: string
+    onShow?: () => void
+    onHide?: () => void
+}
 
 /**
  *  A custom hook to open and hide modal element
@@ -42,17 +52,17 @@ export default function useModal() {
         style,
         mask = true,
         maskClosable = true,
-        rootId = "modal-root",
+        rootId = 'modal-root',
         onShow,
         onHide,
         blockScroll = false,
-        className = "useModal_wrapper",
+        className = 'useModal_wrapper',
         ...rest
     }) => {
         if (!show) return null
 
         const modalStyle: CSSProperties = {
-            position: "fixed",
+            position: 'fixed',
             zIndex: 100,
             top: 0,
             left: 0,
@@ -69,7 +79,7 @@ export default function useModal() {
 
         let root = document.querySelector(`#${rootId}`)
         if (!root) {
-            root = document.createElement("div")
+            root = document.createElement('div')
             root.id = rootId
             document.body.append(root)
         }
@@ -78,9 +88,7 @@ export default function useModal() {
             <div
                 style={modalStyle}
                 onClick={(e) => {
-                    maskClosable &&
-                        e.currentTarget === e.target &&
-                        toggleModal()
+                    maskClosable && e.currentTarget === e.target && toggleModal()
                     onClick?.(e)
                 }}
                 className={className}
@@ -88,7 +96,7 @@ export default function useModal() {
             >
                 {children}
             </div>,
-            root
+            root,
         )
     }
 

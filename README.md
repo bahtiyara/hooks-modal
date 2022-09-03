@@ -1,7 +1,8 @@
 # useModal
 A super light and easy-to-use react custom hook to implement modals using `Portals`.
 &nbsp;&nbsp;
-<a href="https://codesandbox.io/s/hooks-modal-demo-rclqu1?file=/src/App.tsx" target="_blank">See Demo</a>
+
+[See Demo](https://codesandbox.io/s/hooks-modal-demo-rclqu1?file=/src/App.tsx)
 &nbsp;
 
 ## Basic Usage

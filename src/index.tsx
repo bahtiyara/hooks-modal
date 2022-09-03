@@ -25,6 +25,8 @@ import { useState, useEffect, FC, CSSProperties } from 'react'
 import { createPortal } from 'react-dom'
 import useBlockScroll from './useBlockScroll'
 
+import './index.css'
+
 type ModalProps = React.ComponentProps<'div'> & {
     mask?: boolean
     maskClosable?: boolean

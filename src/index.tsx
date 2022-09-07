@@ -55,7 +55,7 @@ export default function useModal() {
         rootId = 'modal-root',
         onShow,
         onHide,
-        blockScroll = true,
+        blockScroll = false,
         className = 'useModal_wrapper',
         ...rest
     }) => {
